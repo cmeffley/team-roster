@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import Players from '../views/Players';
 
-export default function Routes({ player, setPlayers }) {
+export default function Routes({ players, setPlayers }) {
   return (
     <div>
       <Switch>
@@ -12,7 +12,7 @@ export default function Routes({ player, setPlayers }) {
           component={Home}
         />
         <Route path='/player'
-          component={() => <Players player={player} setPlayers={setPlayers} />}
+          component={() => <Players players={players} setPlayers={setPlayers} />}
         />
       </Switch>
     </div>
@@ -20,6 +20,6 @@ export default function Routes({ player, setPlayers }) {
 }
 
 Routes.propTypes = {
-  player: PropTypes.array,
+  players: PropTypes.array,
   setPlayers: PropTypes.func
 };

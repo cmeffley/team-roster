@@ -3,17 +3,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import NavBar from '../components/NavBar';
-import getTeam from '../helpers/data/PlayerData';
+import { getTeam } from '../helpers/data/PlayerData';
 import Routes from '../helpers/Routes';
 import './App.scss';
 
 function App() {
-  const [player, setPlayer] = useState([]);
+  const [players, setPlayers] = useState([]);
   const [user, setUser] = useState(null);
-  console.warn(player);
 
   useEffect(() => {
-    getTeam().then((response) => setPlayer(response));
+    getTeam().then((response) => setPlayers(response));
   }, []);
 
   useEffect(() => {
@@ -39,8 +38,8 @@ function App() {
           <NavBar user={user}/>
           <Routes
             user={user}
-            player={player}
-            setPlayer={setPlayer}
+            player={players}
+            setPlayer={setPlayers}
           />
         </div>
       </Router>
