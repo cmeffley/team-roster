@@ -1,0 +1,30 @@
+{
+  "-MZtkKVB3jsilic7CXgV": {
+    "country": "Brazil",
+    "firebaseKey": "-MZtkKVB3jsilic7CXgV",
+    "imageUrl": "https://img.republicworld.com/republic-prod/stories/promolarge/xxhdpi/z8aouk7o5cs4adaw_1614081929.jpeg?tr=w-758,h-433",
+    "name": "Pele",
+    "position": "forward"
+  },
+  "-MZtlxtZM-VLujOYVmLF": {
+    "country": "Argentina",
+    "firebaseKey": "-MZtlxtZM-VLujOYVmLF",
+    "imageUrl": "https://e3.365dm.com/20/11/512x512/skynews-diego-maradona-kisses_5184268.jpg",
+    "name": "Diego Maradona",
+    "position": "midfield"
+  },
+  "-MZtnEhSdw8vbWrpD4Vm": {
+    "country": "England",
+    "firebaseKey": "-MZtnEhSdw8vbWrpD4Vm",
+    "imageUrl": "https://en.as.com/en/imagenes/2019/09/03/football/1567513900_255377_noticia_normal.jpg",
+    "name": "David Beckham",
+    "position": "midfield"
+  },
+  "-MZtnvFu4O_rQG4DLaBP": {
+    "country": "USA",
+    "firebaseKey": "-MZtnvFu4O_rQG4DLaBP",
+    "imageUrl": "https://i.pinimg.com/originals/b2/f1/02/b2f10281b3f0b58925df9590e85e9818.jpg",
+    "name": "Alexi Lalas",
+    "position": "defender"
+  }
+}
