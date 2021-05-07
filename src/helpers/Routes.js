@@ -3,8 +3,9 @@ import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import Players from '../views/Players';
+import AddPlayers from '../views/AddPlayers';
 
-export default function Routes({ players, setPlayers }) {
+export default function Routes({ players, setPlayers, user }) {
   return (
     <div>
       <Switch>
@@ -12,7 +13,11 @@ export default function Routes({ players, setPlayers }) {
           component={Home}
         />
         <Route path='/player'
-          component={() => <Players players={players} setPlayers={setPlayers} />}
+          component={() => <Players players={players} setPlayers={setPlayers}
+          user={user} />}
+        />
+        <Route path='/add-player'
+        component={() => <AddPlayers setPlayers={setPlayers} user={user} />}
         />
       </Switch>
     </div>
@@ -21,5 +26,6 @@ export default function Routes({ players, setPlayers }) {
 
 Routes.propTypes = {
   players: PropTypes.array,
-  setPlayers: PropTypes.func
+  setPlayers: PropTypes.func,
+  user: PropTypes.any
 };

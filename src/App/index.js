@@ -12,10 +12,6 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    getTeam().then((response) => setPlayers(response));
-  }, []);
-
-  useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
       if (authed) {
         const userInfoObject = {
@@ -25,6 +21,7 @@ function App() {
           user: authed.email.split('@')[0]
         };
         setUser(userInfoObject);
+        getTeam(userInfoObject).then((response) => setPlayers(response));
       } else if (user || user === null) {
         setUser(false);
       }
@@ -38,8 +35,8 @@ function App() {
           <NavBar user={user}/>
           <Routes
             user={user}
-            player={players}
-            setPlayer={setPlayers}
+            players={players}
+            setPlayers={setPlayers}
           />
         </div>
       </Router>
