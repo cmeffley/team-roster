@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PlayerCard from '../components/PlayerCard';
 
-function Players({ player, setPlayer }) {
+function Players({ players, setPlayers, user }) {
   return (
-    <div className='playerCardContainer'>
-      {player.map((playerInfo) => (
+    <div>
+      {players.map((playerInfo) => (
         <PlayerCard
           key={playerInfo.firebaseKey}
           firebaseKey={playerInfo.firebaseKey}
@@ -13,7 +13,9 @@ function Players({ player, setPlayer }) {
           imageUrl={playerInfo.imageUrl}
           position={playerInfo.position}
           country={playerInfo.country}
-          setPlayer={setPlayer}
+          uid={playerInfo.uid}
+          setPlayers={setPlayers}
+          user={user}
         />
       ))}
     </div>
@@ -21,8 +23,9 @@ function Players({ player, setPlayer }) {
 }
 
 Players.propTypes = {
-  player: PropTypes.array.isRequired,
-  setPlayer: PropTypes.func.isRequired
+  players: PropTypes.array.isRequired,
+  setPlayers: PropTypes.func.isRequired,
+  user: PropTypes.any
 };
 
 export default Players;
