@@ -2,7 +2,7 @@
 @import 'variables';
 
 body {
-  background-image: url('https://t4.ftcdn.net/jpg/01/19/33/13/360_F_119331313_B06lQpzD0KUfD6txpOQccgWQJeqrWLdY.jpg');
+  background-image: url('https://www.oceanfm.ie/wp-content/uploads/2017/06/Finn-Park-Grass-Pitch-e1497533529919.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -26,4 +26,18 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.player-form {
+  margin: auto;
+  width: 50%;
+}
+
+#edit-form {
+  color: black;
+}
+
+.homeTitle, .LoginTitle {
+  text-align: center;
+  font-weight: 700;
 }
