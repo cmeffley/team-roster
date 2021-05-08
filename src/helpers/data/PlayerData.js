@@ -27,8 +27,15 @@ const updatePlayer = (player, user) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const deletePlayer = (firebaseKey, user) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/player/${firebaseKey}.json`)
+    .then(() => getTeam(user).then((playerArray) => resolve(playerArray)))
+    .catch((error) => reject(error));
+});
+
 export {
   getTeam,
   addPlayer,
-  updatePlayer
+  updatePlayer,
+  deletePlayer
 };

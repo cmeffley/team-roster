@@ -9,6 +9,7 @@ import {
   Button
 } from 'reactstrap';
 import PlayerForm from './PlayerForm';
+import { deletePlayer } from '../helpers/data/PlayerData';
 
 const PlayerCard = ({
   firebaseKey,
@@ -22,8 +23,17 @@ const PlayerCard = ({
 }) => {
   const [edit, setEdit] = useState(false);
 
-  const handleClick = () => {
-    setEdit((prevState) => !prevState);
+  const handleClick = (type) => {
+    switch (type) {
+      case 'edit':
+        setEdit((prevState) => !prevState);
+        break;
+      case 'delete':
+        deletePlayer(firebaseKey, user).then((playerArray) => setPlayers(playerArray));
+        break;
+      default:
+        console.warn('Football is better than football');
+    }
   };
 
   return (
@@ -35,9 +45,10 @@ const PlayerCard = ({
           <CardImg id='playerImage' src={imageUrl} />
           <CardText>{position}</CardText>
           <CardText>{country}</CardText>
-          <Button color='info' onClick={handleClick}>
+          <Button color='info' onClick={() => handleClick('edit')}>
             {edit ? 'Close Form' : 'Edit Form'}
           </Button>
+          <Button color='danger' onClick={() => handleClick('delete')}>Delete Player</Button>
         </CardBody>
         {
           edit && <PlayerForm
