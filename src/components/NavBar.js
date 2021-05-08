@@ -39,10 +39,10 @@ const NavBar = ({ user }) => {
             {user && authenticated()}
               {
                 user !== null
-                  && <NavItem>
+                  && <NavItem className='authButtons'>
               { user
-                ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
-                : <Button color='info' onClick={signInUser}>Sign In</Button>
+                ? <Button id='signOut' color='danger' onClick={signOutUser}>Sign Out</Button>
+                : <Button id='signIn' color='info' onClick={signInUser}>Sign In</Button>
               }
             </NavItem>
               }

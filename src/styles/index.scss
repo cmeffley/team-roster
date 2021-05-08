@@ -2,10 +2,42 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  background-image: url('https://www.oceanfm.ie/wp-content/uploads/2017/06/Finn-Park-Grass-Pitch-e1497533529919.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #playerImage {
-  height: 300px;
-  width: 250px;
+  height: 400px;
+  width: 350px;
+}
+
+h2 {
+  color: white;
+}
+
+.card {
+  width: 25rem;
+  text-align: center;
+  margin: 10px;
+}
+
+#cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.player-form {
+  margin: auto;
+  width: 50%;
+}
+
+#edit-form {
+  color: black;
+}
+
+.homeTitle, .LoginTitle {
+  text-align: center;
+  font-weight: 700;
 }

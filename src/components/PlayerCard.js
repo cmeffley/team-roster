@@ -38,8 +38,7 @@ const PlayerCard = ({
 
   return (
     <div>
-      <Card key={firebaseKey}
-      id={uid}>
+      <Card className='card'>
         <CardTitle tag='h5'>{name}</CardTitle>
         <CardBody>
           <CardImg id='playerImage' src={imageUrl} />
