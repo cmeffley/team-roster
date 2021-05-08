@@ -95,7 +95,7 @@ const PlayerForm = ({
           onChange={handleInputChange}
         >
         </Input>
-        <Button color='success' type='submit'>Add Player</Button>
+        <Button color='success' type='submit'>Submit</Button>
       </Form>
     </div>
   );
