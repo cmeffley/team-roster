@@ -2,10 +2,28 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  background-image: url('https://t4.ftcdn.net/jpg/01/19/33/13/360_F_119331313_B06lQpzD0KUfD6txpOQccgWQJeqrWLdY.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #playerImage {
-  height: 300px;
-  width: 250px;
+  height: 400px;
+  width: 350px;
+}
+
+h2 {
+  color: white;
+}
+
+.card {
+  width: 25rem;
+  text-align: center;
+  margin: 10px;
+}
+
+#cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }

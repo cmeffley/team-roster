@@ -5,7 +5,7 @@ export default function Home({ user }) {
   return (
     <div>
     { user
-      ? <h2>Click the Team Link above to see the Greatest Footballers ever!</h2>
+      ? <h2 className='homeTitle'>Click the Team Link above to see the Greatest Footballers ever!</h2>
       : <h1>Login to Continue</h1>
     }
     </div>

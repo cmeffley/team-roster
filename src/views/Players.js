@@ -4,7 +4,7 @@ import PlayerCard from '../components/PlayerCard';
 
 function Players({ players, setPlayers, user }) {
   return (
-    <div>
+    <div id='cardContainer'>
       {players.map((playerInfo) => (
         <PlayerCard
           key={playerInfo.firebaseKey}
