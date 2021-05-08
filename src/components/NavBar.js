@@ -19,10 +19,13 @@ const NavBar = ({ user }) => {
   const authenticated = () => (
     <>
       <NavItem>
-        <Link className="nav-link" to="/player">Players</Link>
+        <Link className="navbar-brand" to="/">Home</Link>
       </NavItem>
       <NavItem>
-        <Link className="nav-link" to="/add-player">Add A Player</Link>
+        <Link className="navbar-brand" to="/team">Team</Link>
+      </NavItem>
+      <NavItem>
+        <Link className="navbar-brand" to="/add-player">Add a Player</Link>
       </NavItem>
     </>
   );
@@ -30,14 +33,10 @@ const NavBar = ({ user }) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <Link className="navbar-brand" to="/">Home</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {user && authenticated()}
-            <NavItem>
-              <Link className="nav-link" to="">Team</Link>
-            </NavItem>
               {
                 user !== null
                   && <NavItem>

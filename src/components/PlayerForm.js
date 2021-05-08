@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Button,
@@ -27,6 +28,7 @@ const PlayerForm = ({
     firebaseKey: firebaseKey || null,
     uid: uid || user.uid
   });
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     setPlayer((prevState) => ({
@@ -41,6 +43,7 @@ const PlayerForm = ({
       updatePlayer(player, user).then((playerArray) => setPlayers(playerArray));
     } else {
       addPlayer(player, user).then((playerArray) => setPlayers(playerArray));
+      history.push('/team');
 
       setPlayer({
         name: '',
